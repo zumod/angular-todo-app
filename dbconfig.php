@@ -1,7 +1,12 @@
 <?php
-define ('DB_USER', "root");
-define ('DB_PASSWORD', "");
-define ('DB_DATABASE', "post_api");
-define ('DB_HOST', "localhost");
-$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
+class Connect extends PDO{
+    public function __construct(){
+        parent::__construct("mysql:host=localhost;dbname=task-management","root","",
+            array(PDO::MYSQL_ATTR_INIT_COMMAND=>"SET NAMES utf8")
+    );
+    $this->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+    $this->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
+    }
+}
+
 ?>
