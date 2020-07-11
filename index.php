@@ -6,6 +6,7 @@
     <link rel='stylesheet' type='text/css' href='/modules/micro/media/main.css' />
     <link rel='stylesheet' type='text/css' href='/modules/micro/media/skins/serious.css' />
     <link rel='stylesheet' type='text/css' href='modules/todo/styles.css' />
+    <title>Angular Todo</title>
   </head>
   <body>
     <div class='container'>
